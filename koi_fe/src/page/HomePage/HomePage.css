@@ -1,0 +1,234 @@
+.banner {
+  position: relative;
+  text-align: center;
+  color: white;
+  height: 400px;
+  background-image: url("src/assets/koiBanner.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.banner h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.introduction-section {
+  background-color: #f5f5f5;
+}
+
+.introduction-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #b02a37;
+  padding: 2rem;
+  color: white;
+}
+
+.text-section {
+  flex: 3;
+}
+
+.text-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.text-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.image-section {
+  flex: 1;
+}
+
+.image-section img {
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+.species-section,
+.feedback-section {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.species-section h3,
+.feedback-section h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid #b02a37;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.species-section p,
+.feedback-section p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.KoiProductBtn {
+  margin-left: 46%;
+}
+
+/* Header */
+.species-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-content h3,
+.text-content p {
+  margin: 0;
+  text-align: left;
+}
+
+.viewMoreButton {
+  font-size: 14px;
+  padding: 8px 16px;
+  margin-right: 10px;
+}
+
+.news {
+  background-color: #212121;
+  margin-bottom: 40px;
+  padding: 40px;
+}
+
+/*Service section*/
+.serviceSection {
+  padding-top: 20px;
+  color: white;
+  margin-bottom: 40px;
+  background-color: #b02a37;
+}
+
+.leftSubService {
+  border-right: 3px solid white;
+  background: url("src/assets/service1.jfif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+}
+
+.rightSubService {
+  background: url("src/assets/service2.jfif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+}
+
+.titleLeftSubService,
+.titleRightSubService {
+  border-bottom: 2px solid #fafafa;
+  padding-bottom: 2%;
+}
+/* News Section */
+.newsSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #212121;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 32px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+.newsItem {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  color: black;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.newsItem:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.newsImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+
+.newsContent {
+  padding: 20px;
+}
+
+.readMoreButton {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.readMoreButton:hover {
+  background-color: #d32f2f;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.author {
+  font-weight: bold;
+}
+
+.productList {
+  margin: 10px;
+}
+.web-container {
+  width: 100%; /* Chiếm 80% chiều rộng màn hình */
+  /* margin: 30px auto;  */
+  /* Căn giữa nội dung */
+  border-radius: 10px;
+  padding: 20px;
+  /* background-color: #fff; */
+}
