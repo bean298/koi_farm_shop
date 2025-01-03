@@ -7,7 +7,14 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import { Box, Typography, Checkbox, Button, Rating } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Checkbox,
+  Button,
+  Rating,
+  CircularProgress,
+} from "@mui/material";
 import ListAltIcon from "@mui/icons-material/ListAlt";
 import { GET_FEEDBACK } from "../api/Queries/feedback";
 import { DELETE_FEEDBACK } from "../api/Mutations/feedback";

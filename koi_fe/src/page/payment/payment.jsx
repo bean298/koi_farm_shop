@@ -151,10 +151,9 @@ const CheckoutForm = () => {
     });
 
     handlePaymentMethodResult(result);
-
   };
   let totalPrice = 0;
-  
+
   const handlePaymentMethodResult = async ({ paymentMethod, error }) => {
     if (error) {
       //   toast.error("Lỗi tạo đơn hàng!");
@@ -173,7 +172,9 @@ const CheckoutForm = () => {
           variables: {
             data: {
               user: { connect: { id: userId } },
-              price: parseInt(totalPrice) + (totalCarePrice ? parseInt(totalCarePrice) : 0),
+              price:
+                parseInt(totalPrice) +
+                (totalCarePrice ? parseInt(totalCarePrice) : 0),
               address: orderAddress,
               transaction: paymentMethod.id,
               paymentMethod: location.state.paymentMethod,
@@ -190,9 +191,9 @@ const CheckoutForm = () => {
           const days =
             startDate && endDate
               ? Math.ceil(
-                (new Date(endDate) - new Date(startDate)) /
-                (1000 * 60 * 60 * 24)
-              )
+                  (new Date(endDate) - new Date(startDate)) /
+                    (1000 * 60 * 60 * 24)
+                )
               : 0;
 
           return {
@@ -248,10 +249,10 @@ const CheckoutForm = () => {
             ...(item.product.length > 0
               ? { product: { connect: { id: item.product[0].id } } }
               : {
-                consignmentSale: {
-                  connect: { id: item.consignmentProduct[0].id },
-                },
-              }),
+                  consignmentSale: {
+                    connect: { id: item.consignmentProduct[0].id },
+                  },
+                }),
             order: { connect: { id: orderId } },
             price:
               item.product.length > 0
@@ -260,10 +261,10 @@ const CheckoutForm = () => {
             isStored: checkConsigned(item),
             ...(matchingPair && matchingPair.consignmentRaisingId
               ? {
-                consignmentRaising: {
-                  connect: { id: matchingPair.consignmentRaisingId },
-                },
-              }
+                  consignmentRaising: {
+                    connect: { id: matchingPair.consignmentRaisingId },
+                  },
+                }
               : {}),
           };
         });
@@ -429,7 +430,9 @@ function Payment() {
       });
     }
   }, [userId, refetchCartItems]);
-  {/*Get data from state via navigate */}
+  {
+    /*Get data from state via navigate */
+  }
   const [totalAmount, setTotalAmount] = useState(null);
   const [depositsArray, setDepositsArray] = useState([]);
   const [selectedProducts, setSelectedProducts] = useState([]);
@@ -444,7 +447,7 @@ function Payment() {
       setTotalCarePrice(location.state.totalCarePrice);
       setDepositsArray(location.state.depositsArray);
     }
-  }, [location.state])
+  }, [location.state]);
   useEffect(() => {
     if (dataCart) {
       // Calculate the cart total based on items' prices
@@ -478,14 +481,14 @@ function Payment() {
   }, [location.state]);
   const handleToCheckout = () => {
     navigate("/checkout", {
-      state:{
+      state: {
         totalCarePrice,
         selectedProducts,
         dates,
         depositsArray,
       },
-    })
-  }
+    });
+  };
   const stripePromise = loadStripe(
     "pk_test_51PZy5CRwV3ieMSE0yi4gEMKnnM1gg4TArSRYf1WAjEmBvMz3MOWXZQOPqSxBbIortJdLmhZnDnmFnO1Njqfa7YUV00F4HhRF80"
   );
@@ -498,15 +501,17 @@ function Payment() {
 
   return (
     <section className="container mt-5">
-  
-        <section className="back-button-section" onClick={handleToCheckout} role="button" tabIndex={0}>
-          <div className="icon-container">
-            <FaArrowLeft className="icon" />
-          </div>
-          <span className="back-button-text">
-            Quay lại trang điền thông tin
-          </span>
-        </section>
+      <section
+        className="back-button-section"
+        onClick={handleToCheckout}
+        role="button"
+        tabIndex={0}
+      >
+        <div className="icon-container">
+          <FaArrowLeft className="icon" />
+        </div>
+        <span className="back-button-text">Quay lại trang điền thông tin</span>
+      </section>
       <section className="row">
         {/* Order Summary Section */}
         <article className="col-md-6">
